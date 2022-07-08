@@ -1,14 +1,14 @@
 public class Solution {
     public int PivotIndex(int[] nums) {
-        int sum = 0;
         int leftsum = 0;
-        foreach (var num in nums)
+        int total = 0;
+        foreach(var num in nums)
         {
-            sum += num;
+            total += num;
         }
-        for (int i = 0; i < nums.Length; i++)
+        for(int i = 0; i < nums.Length; i++)
         {
-            if(leftsum == sum - leftsum - nums[i])
+            if(leftsum == total - leftsum - nums[i])
             {
                 return i;
             }
